@@ -1,11 +1,13 @@
 import React from 'react';
 
+import '../assets/styles/PokemonCards.css';
+
 const PokemonCards = ({ name, image }) => {
   return (
-    <div>
-      <div>{name}</div>
+    <section className='main'>
       <img src={image} alt={name} />
-    </div>
+      <div>{name}</div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const GetPokemon = () => {
   const arr = [];
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=250')
+    fetch('https://pokeapi.co/api/v2/pokemon/?limit=100')
       .then((res) => res.json())
       .then((data) =>
         setPokemon(
@@ -17,10 +17,10 @@ const GetPokemon = () => {
             fetch(item.url)
               .then((res) => res.json())
               .then((list) => arr.push(list));
-            setDetails(arr);
           })
         )
       );
+    setDetails(arr);
   }, []);
 
   setTimeout(() => {
@@ -32,13 +32,15 @@ const GetPokemon = () => {
       {loading ? (
         <p>loading...</p>
       ) : (
-        details.map((item) => (
-          <PokemonCards
-            image={item.sprites.front_default}
-            key={item.name}
-            name={item.name}
-          />
-        ))
+        <div className='row'>
+          {details.map((item) => (
+            <PokemonCards
+              key={item.id}
+              image={item.sprites.front_default}
+              name={item.name}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
