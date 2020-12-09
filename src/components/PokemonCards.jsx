@@ -4,10 +4,10 @@ import '../assets/styles/PokemonCards.css';
 
 const PokemonCards = ({ name, image }) => {
   return (
-    <section className='main'>
+    <div className='main'>
       <img src={image} alt={name} />
-      <div>{name}</div>
-    </section>
+      <div className='main-name'>{name}</div>
+    </div>
   );
 };
 

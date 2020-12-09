@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import PokemonCards from './PokemonCards';
+import '../assets/styles/GetPokemon.css';
+
+import PokemonCards from '../components/PokemonCards';
 
 const GetPokemon = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -25,14 +27,14 @@ const GetPokemon = () => {
 
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 3000);
 
   return (
     <div>
       {loading ? (
         <p>loading...</p>
       ) : (
-        <div className='row'>
+        <div className='row pokemonList'>
           {details.map((item) => (
             <PokemonCards
               key={item.id}

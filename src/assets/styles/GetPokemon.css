@@ -1,0 +1,7 @@
+.pokemonList {
+  width: 100%;
+  margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
