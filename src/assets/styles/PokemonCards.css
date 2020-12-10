@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 10%;
+  min-width: 10%;
   border-radius: 10px;
   box-shadow: 2px 2px 1px 3px rgb(59, 58, 58);
   background: rgb(232, 241, 230);
@@ -18,8 +18,13 @@
   );
 }
 
-.main :hover {
+.main:hover {
   cursor: pointer;
+  background: #90be6d;
+}
+
+.main:hover img {
+  opacity: 0.3;
 }
 
 .main-name {
@@ -27,4 +32,20 @@
   border-radius: 10px;
   padding: 0 5px;
   border: 2px solid rgb(133, 129, 129);
+}
+
+.detailsOf {
+  position: absolute;
+  z-index: 1;
+  color: #000;
+  font-weight: bold;
+  display: none;
+}
+
+.detailsOn {
+  position: absolute;
+  z-index: 1;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
 }
