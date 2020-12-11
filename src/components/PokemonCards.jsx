@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../assets/styles/PokemonCards.css';
 
@@ -13,9 +14,12 @@ const PokemonCards = ({ name, image }) => {
     <div className='main' onMouseOver={handleOver} onMouseOut={handleOut}>
       <img src={image} alt={name} />
       <div className='main-name'>{name}</div>
-      <label className={classOn ? 'detailsOn' : 'detailsOf'}>
+      <Link
+        to={`/details/${name}/`}
+        className={classOn ? 'detailsOn' : 'detailsOf'}
+      >
         View details
-      </label>
+      </Link>
     </div>
   );
 };
