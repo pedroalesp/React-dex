@@ -12,13 +12,17 @@ const PokemonCards = ({ name, image }) => {
 
   return (
     <div className='main' onMouseOver={handleOver} onMouseOut={handleOut}>
-      <img src={image} alt={name} />
-      <div className='main-name'>{name}</div>
+      <label className={`${classOn ? 'detailsOn' : 'detailsOf'}`}>
+        View details
+      </label>
       <Link
         to={`/details/${name}/`}
-        className={classOn ? 'detailsOn' : 'detailsOf'}
+        className='text-reset text-decoration-none'
       >
-        View details
+        <div>
+          <img src={image} alt={name} />
+          <div className='main-name'>{name}</div>
+        </div>
       </Link>
     </div>
   );

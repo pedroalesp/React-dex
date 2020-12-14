@@ -9,9 +9,11 @@ const GetPokemon = () => {
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(true);
   const arr = [];
+  const API = 'https://pokeapi.co/api/v2/pokemon/';
+  const limit = '?limit=32';
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=100')
+    fetch(`${API}${limit}`)
       .then((res) => res.json())
       .then((data) =>
         setPokemon(

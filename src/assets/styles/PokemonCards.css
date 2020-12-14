@@ -8,8 +8,6 @@
   min-width: 10%;
   border-radius: 10px;
   box-shadow: 2px 2px 1px 3px rgb(59, 58, 58);
-  background: rgb(232, 241, 230);
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     119deg,
     rgba(255, 255, 255, 1) 9%,
@@ -31,6 +29,7 @@
   background: rgb(245, 241, 241);
   border-radius: 10px;
   padding: 0 5px;
+  text-align: center;
   border: 2px solid rgb(133, 129, 129);
 }
 
@@ -45,6 +44,7 @@
 .detailsOn {
   position: absolute;
   z-index: 1;
+
   color: #000;
   font-weight: bold;
   cursor: pointer;
