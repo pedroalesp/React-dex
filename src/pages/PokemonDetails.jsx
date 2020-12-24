@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import '../assets/styles/PokemonDetails.css';
 
 import Loader from '../components/Loader';
@@ -42,27 +42,33 @@ const PokemonDetails = (props) => {
       {loading ? (
         <Loader />
       ) : (
-        <div className='details__container'>
-          <img className='details__image' src={pokemonInfo.img} alt='front' />
-          <div className='details__container--info'>
-            <p className='details__container--items'>
-              Name: <label>{pokemonInfo.name}</label>
-            </p>
-            <p className='details__container--items'>
-              Type: <label>{pokemonInfo.type}</label>
-            </p>
-            <p className='details__container--items'>
-              Weigth: <label>{pokemonInfo.weight}</label>
-            </p>
-            <p className='details__container--items'>
-              Height: <label>{pokemonInfo.height}</label>
-            </p>
-            <p className='details__container--items'>
-              Ability:<label>{pokemonInfo.ability}</label>{' '}
-            </p>
+        <React.Fragment>
+          <div className='details__container'>
+            <img className='details__image' src={pokemonInfo.img} alt='front' />
+            <div className='details__container--info'>
+              <p className='details__container--items'>
+                Name: <label>{pokemonInfo.name}</label>
+              </p>
+              <p className='details__container--items'>
+                Type: <label>{pokemonInfo.type}</label>
+              </p>
+              <p className='details__container--items'>
+                Weigth: <label>{pokemonInfo.weight}</label>
+              </p>
+              <p className='details__container--items'>
+                Height: <label>{pokemonInfo.height}</label>
+              </p>
+              <p className='details__container--items'>
+                Ability:<label>{pokemonInfo.ability}</label>{' '}
+              </p>
+            </div>
           </div>
-          <button className='btn btn-primary'>Go back</button>
-        </div>
+          <button className='btn btn-primary'>
+            <Link className='text-reset text-decoration-none' to='/'>
+              Go back
+            </Link>
+          </button>
+        </React.Fragment>
       )}
     </div>
   );

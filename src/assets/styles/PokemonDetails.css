@@ -3,13 +3,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .details__container {
   font-size: 1.5rem;
-
   height: 79%;
-  width: 30%;
+  min-width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,4 +51,22 @@
 
 .details__container--items > label {
   color: #212529;
+}
+
+.btn {
+  margin: 10px;
+}
+
+@media screen and (max-width: 330px) {
+  .details__container--info {
+    width: 90%;
+    font-size: 20px;
+    padding: 18px 0 0 1px;
+    align-items: center;
+  }
+
+  .details__image {
+    width: 8em;
+    margin: 20px 20px 0 20px;
+  }
 }
