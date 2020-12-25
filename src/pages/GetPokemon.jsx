@@ -26,8 +26,6 @@ const GetPokemon = () => {
             } catch (error) {
               console.error('404');
             }
-
-            return;
           })
         )
       );

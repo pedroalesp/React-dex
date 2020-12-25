@@ -57,7 +57,7 @@
   margin: 10px;
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 350px) {
   .details__container--info {
     width: 90%;
     font-size: 20px;
