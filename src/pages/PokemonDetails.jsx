@@ -63,11 +63,9 @@ const PokemonDetails = (props) => {
               </p>
             </div>
           </div>
-          <button className='btn btn-primary'>
-            <Link className='text-reset text-decoration-none' to='/'>
-              Go back
-            </Link>
-          </button>
+          <Link className='text-reset text-decoration-none' to='/pokemon'>
+            <button className='btn btn-primary'>Go back</button>
+          </Link>
         </React.Fragment>
       )}
     </div>

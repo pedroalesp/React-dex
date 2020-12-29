@@ -14,22 +14,24 @@ const GetPokemon = () => {
   const limit = '?limit=151';
 
   useEffect(() => {
-    fetch(`${API}${limit}`)
-      .then((res) => res.json())
-      .then((data) =>
-        setPokemon(
-          data.results.map(async (item) => {
-            try {
-              const response = await fetch(item.url);
-              const poke = await response.json();
-              arr.push(poke);
-            } catch (error) {
-              console.error('404');
-            }
-          })
-        )
-      );
-    setDetails(arr);
+    Promise.all([
+      fetch(`${API}${limit}`)
+        .then((res) => res.json())
+        .then((data) =>
+          setPokemon(
+            data.results.map(async (item) => {
+              try {
+                const response = await fetch(item.url);
+                const poke = await response.json();
+                arr.push(poke);
+                setDetails(arr);
+              } catch (error) {
+                console.error('404');
+              }
+            })
+          )
+        ),
+    ]);
   }, []);
 
   setTimeout(() => {
