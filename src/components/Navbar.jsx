@@ -7,7 +7,7 @@ import ultraball from '../assets/static/ultraball.png';
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <Link to='/' className=' text-decoration-none'>
+      <Link to='/react-dex' className=' text-decoration-none'>
         <h1 className='navbar-title'>React-dex</h1>
       </Link>
       <img src={ultraball} alt='pokeball' />

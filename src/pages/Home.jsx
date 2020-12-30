@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../assets/styles/Home.css';
+import pokeball from '../assets/static/pokeball.png';
 
 const Home = () => (
   <div className='home'>
@@ -25,7 +26,10 @@ const Home = () => (
     <div className='home__cta'>
       <Link to='/pokemon'>
         <button className='btn btn-primary'>
-          <h1>Find your pokemon!</h1>
+          <h1>
+            <img src={pokeball} alt='pokeball' />
+            Find your pokemon!
+          </h1>
         </button>
       </Link>
     </div>

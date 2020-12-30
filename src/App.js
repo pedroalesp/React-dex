@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter>
       <Layout>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/react-dex' component={Home} />
           <Route exact path='/pokemon' component={GetPokemon} />
           <Route
             exact
