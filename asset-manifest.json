@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/react-dex/static/css/main.8a3de571.chunk.css",
-    "main.js": "/react-dex/static/js/main.0de6f7d0.chunk.js",
-    "main.js.map": "/react-dex/static/js/main.0de6f7d0.chunk.js.map",
-    "runtime-main.js": "/react-dex/static/js/runtime-main.a336cb02.js",
-    "runtime-main.js.map": "/react-dex/static/js/runtime-main.a336cb02.js.map",
+    "main.css": "/react-dex/static/css/main.5d106714.chunk.css",
+    "main.js": "/react-dex/static/js/main.96bccf20.chunk.js",
+    "main.js.map": "/react-dex/static/js/main.96bccf20.chunk.js.map",
+    "runtime-main.js": "/react-dex/static/js/runtime-main.fcc6bf18.js",
+    "runtime-main.js.map": "/react-dex/static/js/runtime-main.fcc6bf18.js.map",
     "static/css/2.43b2b750.chunk.css": "/react-dex/static/css/2.43b2b750.chunk.css",
-    "static/js/2.a16729a2.chunk.js": "/react-dex/static/js/2.a16729a2.chunk.js",
-    "static/js/2.a16729a2.chunk.js.map": "/react-dex/static/js/2.a16729a2.chunk.js.map",
-    "static/js/3.7eb0022d.chunk.js": "/react-dex/static/js/3.7eb0022d.chunk.js",
-    "static/js/3.7eb0022d.chunk.js.map": "/react-dex/static/js/3.7eb0022d.chunk.js.map",
+    "static/js/2.8f57d3e8.chunk.js": "/react-dex/static/js/2.8f57d3e8.chunk.js",
+    "static/js/2.8f57d3e8.chunk.js.map": "/react-dex/static/js/2.8f57d3e8.chunk.js.map",
+    "static/js/3.314a7112.chunk.js": "/react-dex/static/js/3.314a7112.chunk.js",
+    "static/js/3.314a7112.chunk.js.map": "/react-dex/static/js/3.314a7112.chunk.js.map",
     "index.html": "/react-dex/index.html",
     "static/css/2.43b2b750.chunk.css.map": "/react-dex/static/css/2.43b2b750.chunk.css.map",
-    "static/css/main.8a3de571.chunk.css.map": "/react-dex/static/css/main.8a3de571.chunk.css.map",
-    "static/js/2.a16729a2.chunk.js.LICENSE.txt": "/react-dex/static/js/2.a16729a2.chunk.js.LICENSE.txt",
+    "static/css/main.5d106714.chunk.css.map": "/react-dex/static/css/main.5d106714.chunk.css.map",
+    "static/js/2.8f57d3e8.chunk.js.LICENSE.txt": "/react-dex/static/js/2.8f57d3e8.chunk.js.LICENSE.txt",
     "static/media/packman-loader.d4f0a449.svg": "/react-dex/static/media/packman-loader.d4f0a449.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a336cb02.js",
+    "static/js/runtime-main.fcc6bf18.js",
     "static/css/2.43b2b750.chunk.css",
-    "static/js/2.a16729a2.chunk.js",
-    "static/css/main.8a3de571.chunk.css",
-    "static/js/main.0de6f7d0.chunk.js"
+    "static/js/2.8f57d3e8.chunk.js",
+    "static/css/main.5d106714.chunk.css",
+    "static/js/main.96bccf20.chunk.js"
   ]
 }
