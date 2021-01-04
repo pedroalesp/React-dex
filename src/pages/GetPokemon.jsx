@@ -41,7 +41,7 @@ const GetPokemon = () => {
   }, 2000);
 
   const filteredPokemon = details.filter((poke) => {
-    return poke.name.toLowerCase().includes(query);
+    return poke.name.toLowerCase().includes(query.toLowerCase());
   });
 
   return (
