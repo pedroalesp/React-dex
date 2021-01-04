@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import '../assets/styles/GetPokemon.css';
 
-import PokemonCards from '../components/PokemonCards';
+import PokemonList from '../components/PokemonList';
 import Loader from '../components/Loader';
+import noFound from '../assets/static/pikachu.png';
 
 const GetPokemon = () => {
   const [pokemon, setPokemon] = useState([]);
   const [details, setDetails] = useState([]);
+  const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const arr = [];
   const API = 'https://pokeapi.co/api/v2/pokemon/';
@@ -38,31 +40,36 @@ const GetPokemon = () => {
     setLoading(false);
   }, 2000);
 
+  const filteredPokemon = details.filter((poke) => {
+    return poke.name.toLowerCase().includes(query);
+  });
+
   return (
-    <div>
+    <React.Fragment>
       {loading ? (
         <Loader />
       ) : (
         <React.Fragment>
           <div className='search'>
             <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               className='search__input'
               type='text'
               placeholder='Find your pokemon!'
             />
           </div>
-          <div className='row pokemonList'>
-            {details.map((item) => (
-              <PokemonCards
-                key={item.id}
-                image={item.sprites.front_default}
-                name={item.name}
-              />
-            ))}
-          </div>
+          {filteredPokemon.length === 0 ? (
+            <div className=' nofound'>
+              <h2>No pokemon were founded</h2>
+              <img className='noFound--img' src={noFound} alt='no found' />
+            </div>
+          ) : (
+            <PokemonList pokeList={filteredPokemon} />
+          )}
         </React.Fragment>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 

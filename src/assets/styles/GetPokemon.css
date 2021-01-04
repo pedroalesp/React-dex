@@ -1,11 +1,3 @@
-.pokemonList {
-  width: 100vw;
-  margin: 0 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .search {
   display: flex;
   justify-content: center;
@@ -19,4 +11,15 @@
   min-width: 30%;
   text-align: center;
   padding: 8px;
+}
+
+.nofound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noFound--img {
+  width: 40%;
 }
