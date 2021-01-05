@@ -26,8 +26,8 @@ const PokemonCards = ({ name, image, id }) => {
       >
         <div>
           <img src={image} alt={name} />
-
-          <div className='main-name'> {`#${id} ${name}`}</div>
+          <div>#{id}</div>
+          <div className='main-name'>{name}</div>
         </div>
       </Link>
     </div>
