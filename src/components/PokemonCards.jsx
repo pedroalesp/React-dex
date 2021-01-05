@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../assets/styles/PokemonCards.css';
 
-const PokemonCards = ({ name, image }) => {
+const PokemonCards = ({ name, image, id }) => {
   const [classOn, setClassOn] = useState(false);
 
   const handleOver = () => setClassOn(true);
@@ -26,7 +26,8 @@ const PokemonCards = ({ name, image }) => {
       >
         <div>
           <img src={image} alt={name} />
-          <div className='main-name'>{name}</div>
+
+          <div className='main-name'> {`#${id} ${name}`}</div>
         </div>
       </Link>
     </div>

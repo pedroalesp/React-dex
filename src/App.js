@@ -5,6 +5,7 @@ import GetPokemon from './pages/GetPokemon';
 import Home from './pages/Home';
 import Layout from './components/Layout';
 import PokemonDetails from './pages/PokemonDetails';
+import ErrorAlert from './components/ErrorAlert';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             path='/details/:pokemonName/'
             component={PokemonDetails}
           />
+          <Route component={ErrorAlert} />
         </Switch>
       </Layout>
     </BrowserRouter>

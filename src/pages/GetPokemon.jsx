@@ -25,22 +25,30 @@ const GetPokemon = () => {
               try {
                 const response = await fetch(item.url);
                 const poke = await response.json();
+
                 arr.push(poke);
-                setDetails(arr);
               } catch (error) {
                 console.error('404');
               }
             })
           )
         ),
+      // arr.sort((a, b) => {
+      //   return a.id - b.id;
+      // }),
+      setDetails(arr),
     ]);
   }, []);
 
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 5000);
 
-  const filteredPokemon = details.filter((poke) => {
+  const ordenedPokemon = details.sort((a, b) => {
+    return a.id - b.id;
+  });
+
+  const filteredPokemon = ordenedPokemon.filter((poke) => {
     return poke.name.toLowerCase().includes(query.toLowerCase());
   });
 
