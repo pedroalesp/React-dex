@@ -69,7 +69,7 @@ const GetPokemon = () => {
           </div>
           {filteredPokemon.length === 0 ? (
             <div className=' nofound'>
-              <h2>No pokemon were founded</h2>
+              <h2>No pokemon were found</h2>
               <img className='noFound--img' src={noFound} alt='no found' />
             </div>
           ) : (
